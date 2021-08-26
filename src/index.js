@@ -111,7 +111,7 @@ const userProvidesAppointmentType = (req) => {
         }
     });
 
-    let outString = `Got that ${first_name}! Are you a new or existing patient?`;
+    let outString = `Got that ${first_name}! Are you a new or existing patient?<button type="button" class"quick_reply">New Patient</button><button type="button" class"quick_reply">Existing Patient</button>`;
 
     let awaitPatientType = `${session}/contexts/await-patient-type`;
     let oc = [{
@@ -445,7 +445,7 @@ const checkFirstNameUserChoosesAppointment = (req) => {
             transcript: transcript
         }, false, oc);
     } else if (patient_type === undefined) {
-        outString += `Got that ${first_name}! Are you a new or existing patient?`;
+        outString += `Got that ${first_name}! Are you a new or existing patient?<button type="button" class"quick_reply">New Patient</button><button type="button" class"quick_reply">Existing Patient</button>`;
         let awaitPatientType = `${session}/contexts/await-patient-type`;
         let oc = [{
             name: awaitPatientType,
