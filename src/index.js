@@ -499,7 +499,7 @@ const checkFirstNameUserChoosesAppointment = (req) => {
                 transcript: transcript
             }, false, oc);
         } else {
-            outString += `Thank you! May I also have your email for correspondence?`;
+            outString += `Thank you! May I also have your email address for correspondence?`;
             let awaitEmail = `${session}/contexts/await-email`
             let oc = [{
                 name: awaitEmail,
@@ -527,7 +527,7 @@ const checkFirstNameUserChoosesAppointment = (req) => {
                 transcript: transcript
             }, false, oc);
         } else {
-            outString += `Thanks ${first_name}! ::next-1000::When was your last see a dentist?<button type="button" class"quick_reply">6 months</button><button type="button" class"quick_reply">1 year</button><button type="button" class"quick_reply">More than a year</button>`;
+            outString += `Thanks ${first_name}! ::next-1000::When did you last see a dentist?<button type="button" class"quick_reply">6 months</button><button type="button" class"quick_reply">1 year</button><button type="button" class"quick_reply">More than a year</button>`;
             let patientTypeContext = `${session}/contexts/`;
             // Set patient type context
             if (patient_type === 'Existing Patient') {
@@ -578,7 +578,7 @@ const skipEmail = (req) => {
         }
     });
 
-    let outString = `Thanks ${first_name}! ::next-1000::When was your last see a dentist?<button type="button" class"quick_reply">6 months</button><button type="button" class"quick_reply">1 year</button><button type="button" class"quick_reply">More than a year</button>`;
+    let outString = `Thanks ${first_name}! ::next-1000::When did you last see a dentist?<button type="button" class"quick_reply">6 months</button><button type="button" class"quick_reply">1 year</button><button type="button" class"quick_reply">More than a year</button>`;
     let patientTypeContext = `${session}/contexts/`;
     // Set patient type context
     if (patient_type === 'Existing Patient') {
