@@ -357,7 +357,7 @@ const checkFirstNameAtDefaultWelcomeIntent = (req) => {
     let outString = '';
 
     if (first_name === undefined) {
-        outString += `Welcome to <%practice_name%>! I'm <%agent_name%>, the virtual assistant for our practice.::next-2000::I can help answer your questions, schedule an appointment or connect you with our patient coordinator.::next-2000:: To get started, select an option below.<button type="button" class"quick_reply">Request Appointment</button><button type="button" class"quick_reply">Ask a Question</button><button type="button" class"quick_reply">Connect with Staff</button>`;
+        outString += `Welcome to <%practice_name%>! I'm <%agent_name%>, the virtual assistant for our practice.::next-2000::I can help answer your questions, schedule an appointment or connect you with our patient coordinator.::next-2000:: To get started, what is your first name?`;
         let awaitFirstname = `${session}/contexts/await-first-name`;
         let oc = [{
             name: awaitFirstname,
