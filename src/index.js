@@ -305,7 +305,7 @@ const userProvideFirstnamePC = async (req) => {
             }, false, oc);
         }
     } else {
-        outString += `Thank you ${first_name}!::next-1000:: Expect a call from our patient coordinator to schedule your appointment.::next-2000:: Can I help with anything else?<button type="button" class"quick_reply">Disconnect</button>`;
+        outString += `Thank you ${first_name}!::next-1000:: Expect a call from our patient coordinator to schedule your appointment.<button type="button" class"quick_reply">Disconnect</button>`;
         let patientTypeContext = `${session}/contexts/`;
         let awaitPatientTypePC = `${session}/contexts/await-pc-patient-type`;
         let awaitFirstnamePC = `${session}/contexts/await-pc-first-name`;
@@ -547,7 +547,7 @@ const checkFirstNameUserChoosesAppointment = (req) => {
             }, false, oc);
         }
     } else {
-        outString += `Sounds good. Expect a call from our patient coordinator to schedule your appointment.::next-2000::Can I help with anything else?<button type="button" class"quick_reply">Disconnect</button>`;
+        outString += `Sounds good. Expect a call from our patient coordinator to schedule your appointment.<button type="button" class"quick_reply">Disconnect</button>`;
         return utteranceTranscript({
             fulfillmentText: outString,
             queryText: queryText,
