@@ -285,7 +285,7 @@ const userProvideFirstnamePC = async (req) => {
                 transcript: transcript
             }, false, oc);
         } else {
-            outString += `Can you briefly describe your dental needs?`;
+            outString += `When did you last see a dentist?<button type="button" class"quick_reply">6 months</button><button type="button" class"quick_reply">1 year</button><button type="button" class"quick_reply">More than a year</button>`;
             let patientTypeContext = `${session}/contexts/`
             // Set patient type context
             if (patient_type === 'Existing Patient') {
