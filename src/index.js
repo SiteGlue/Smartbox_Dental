@@ -285,7 +285,7 @@ const userProvideFirstnamePC = async (req) => {
                 transcript: transcript
             }, false, oc);
         } else {
-            outString += `When is the best time to contact you?<button type="button" class"quick_reply">Morning</button><button type="button" class"quick_reply">Afternoon</button><button type="button" class"quick_reply">Evening</button>`;
+            outString += `When is the best time to contact you?<button type="button" class"quick_reply">Morning</button><button type="button" class"quick_reply">Afternoon</button>`;
             let patientTypeContext = `${session}/contexts/`
             // Set patient type context
             if (patient_type === 'Existing Patient') {
